@@ -45,14 +45,14 @@ export const hero = {
 
 export const features = {
   eyebrow: "Why Lumen",
-  headline: "Everything you need to answer 'did that work?'",
+  headline: "Everything you need to answer “did that work?”",
   subhead:
     "Three things most analytics tools make you stitch together yourself. Lumen ships them wired up.",
   items: [
     {
       icon: "activity" as const,
       title: "Live funnels",
-      body: "Watch conversion move as you deploy. Funnels recompute in-stream, so a regression shows up in seconds — not in tomorrow's batch job.",
+      body: "Watch conversion move as you deploy. Funnels recompute in-stream, so a regression shows up in seconds — not in tomorrow’s batch job.",
     },
     {
       icon: "gitBranch" as const,
@@ -62,7 +62,7 @@ export const features = {
     {
       icon: "users" as const,
       title: "Shared definitions",
-      body: "One metric catalogue for the whole company. When someone changes what 'active user' means, everyone's charts update together.",
+      body: "One metric catalogue for the whole company. When someone changes what “active user” means, everyone’s charts update together.",
     },
   ],
 } as const;
@@ -187,7 +187,7 @@ export const faq = {
     },
     {
       q: "What happens if we go over our event limit?",
-      a: "Nothing breaks. We keep ingesting and flag the overage in-app, then bill the difference at your plan's rate at the end of the cycle. We never silently drop events.",
+      a: "Nothing breaks. We keep ingesting and flag the overage in-app, then bill the difference at your plan’s rate at the end of the cycle. We never silently drop events.",
     },
   ],
 } as const;
