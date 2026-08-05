@@ -41,7 +41,7 @@ export function HeroVisual() {
             <p className="text-sm text-muted">Checkout conversion</p>
             <p className="mt-1 flex items-baseline gap-2">
               <span className="text-title tabular-nums">4.82%</span>
-              <span className="text-sm font-medium text-emerald-500">
+              <span className="text-sm font-medium text-emerald-700 dark:text-emerald-400">
                 +0.61
               </span>
             </p>

@@ -63,15 +63,6 @@ const config: Config = {
         // Matches the spring-ish feel of the Framer Motion transitions.
         out: "cubic-bezier(0.22, 1, 0.36, 1)",
       },
-      keyframes: {
-        "marquee-x": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" },
-        },
-      },
-      animation: {
-        "marquee-x": "marquee-x 40s linear infinite",
-      },
     },
   },
   plugins: [],
