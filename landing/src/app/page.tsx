@@ -1,6 +1,7 @@
 import { Features } from "@/components/sections/features";
 import { Hero } from "@/components/sections/hero";
 import { Navbar } from "@/components/sections/navbar";
+import { Pricing } from "@/components/sections/pricing";
 import { SocialProof } from "@/components/sections/social-proof";
 
 /**
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Features />
         <SocialProof />
+        <Pricing />
       </main>
     </>
   );
