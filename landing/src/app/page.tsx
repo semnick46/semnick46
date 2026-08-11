@@ -1,3 +1,4 @@
+import { Faq } from "@/components/sections/faq";
 import { Features } from "@/components/sections/features";
 import { Hero } from "@/components/sections/hero";
 import { Navbar } from "@/components/sections/navbar";
@@ -20,6 +21,7 @@ export default function Home() {
         <Features />
         <SocialProof />
         <Pricing />
+        <Faq />
       </main>
     </>
   );
