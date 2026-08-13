@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Colour tokens. Stored as raw HSL channels (no hsl() wrapper) so Tailwind
+ * can compose them with an alpha value — see <alpha-value> in tailwind.config.
+ *
+ * Deliberately OUTSIDE @layer base. Tailwind tree-shakes rules inside a layer
+ * when their selector never appears in the content files, and `dark` appears
+ * nowhere until something toggles the theme — so declaring `.dark` in the
+ * layer got the entire block dropped from the build.
+ */
+:root {
+  --bg: 0 0% 100%;
+  --surface: 240 20% 99%;
+  --elevated: 0 0% 100%;
+  --line: 240 6% 90%;
+
+  /* Lightness picked so muted and subtle both clear WCAG AA (4.5:1) against
+     --bg. Subtle is the lightest token allowed to carry real content. */
+  --fg: 240 10% 8%;
+  --muted: 240 4% 38%;
+  --subtle: 240 4% 46%;
+
+  --brand: 256 82% 58%;
+  --brand-strong: 256 74% 48%;
+  --brand-soft: 256 90% 96%;
+  --brand-on: 0 0% 100%;
+}
+
+.dark {
+  --bg: 240 12% 6%;
+  --surface: 240 10% 9%;
+  --elevated: 240 9% 12%;
+  --line: 240 8% 20%;
+
+  --fg: 240 20% 98%;
+  --muted: 240 6% 66%;
+  --subtle: 240 5% 54%;
+
+  --brand: 256 90% 74%;
+  --brand-strong: 256 92% 82%;
+  --brand-soft: 256 42% 15%;
+  --brand-on: 240 40% 10%;
+}
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  body {
+    @apply bg-bg text-fg antialiased;
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  /* Anchor scrolling has to clear the fixed navbar. */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  /**
+   * Respect the OS-level motion preference globally. Framer Motion also reads
+   * this via useReducedMotion, but killing CSS transitions here covers the
+   * hover/transition utilities that never go through Framer.
+   */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-bg;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* Shared section rhythm — keeps vertical spacing consistent across sections. */
+  .section {
+    @apply mx-auto w-full max-w-content px-5 py-20 sm:px-6 md:py-28;
+  }
+}
