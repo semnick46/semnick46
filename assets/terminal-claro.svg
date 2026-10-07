@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="432" viewBox="0 0 900 432" role="img" aria-label="thulio@mestria: fundador da MestrIA, app de estudo com IA e compromisso de estudo na Solana">
-<defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a7f37"/><stop offset="1" stop-color="#0969da"/></linearGradient><clipPath id="digita"><rect x="38" y="56" width="0" height="26"><animate attributeName="width" from="0" to="300" begin="0.3s" dur="0.9s" fill="freeze"/></rect></clipPath></defs>
+<defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a7f37"/><stop offset="1" stop-color="#0969da"/></linearGradient><clipPath id="digita"><rect x="38" y="56" width="0" height="26"><animate attributeName="width" from="0" to="300" begin="0.3s" dur="0.9s" fill="freeze"/></rect></clipPath><radialGradient id="hs"><stop offset="0" stop-color="#f4ff3a" stop-opacity="0.75"/><stop offset="1" stop-color="#b6ff7a" stop-opacity="0"/></radialGradient></defs>
 <rect x="1" y="1" width="898" height="430" rx="14" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
 <path d="M1 15a14 14 0 0 1 14-14h870a14 14 0 0 1 14 14v29H1z" fill="#f6f8fa"/>
 <line x1="1" y1="44" x2="899" y2="44" stroke="#d0d7de" stroke-width="1.5"/>

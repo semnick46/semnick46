@@ -1,0 +1,49 @@
+# Atualiza o mapa de vagalumes (contribuições do perfil) todo dia e publica os
+# SVGs na branch output. O README aponta para lá, assim a main não recebe
+# commit automático. Se o GitHub não devolver os dados num dia, o mapa
+# anterior continua no ar e o workflow não falha.
+name: vagalumes
+
+on:
+  schedule:
+    - cron: "17 3 * * *" # 00:17 em Brasília
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/vagalumes.py
+      - .github/workflows/vagalumes.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vagalumes
+  cancel-in-progress: false
+
+jobs:
+  mapa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Gerar o mapa
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/vagalumes.py --usuario "$GITHUB_REPOSITORY_OWNER" --saida "$RUNNER_TEMP/mapa"
+
+      - name: Publicar na branch output
+        run: |
+          if ! ls "$RUNNER_TEMP"/mapa/*.svg > /dev/null 2>&1; then
+            echo "Sem mapa novo hoje; o anterior continua no ar."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan output
+          git rm -rfq .
+          cp "$RUNNER_TEMP"/mapa/*.svg .
+          git add ./*.svg
+          git commit -qm "Mapa de vagalumes de $(date -u +%F)"
+          git push -qf origin output

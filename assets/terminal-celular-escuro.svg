@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="500" height="718" viewBox="0 0 500 718" role="img" aria-label="thulio@mestria: fundador da MestrIA, app de estudo com IA e compromisso de estudo na Solana">
-<defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#83f28f"/><stop offset="1" stop-color="#69a7ff"/></linearGradient><clipPath id="digita"><rect x="22" y="52" width="0" height="28"><animate attributeName="width" from="0" to="320" begin="0.3s" dur="0.9s" fill="freeze"/></rect></clipPath></defs>
-<rect x="1" y="1" width="498" height="716" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="2"/>
-<path d="M1 15a14 14 0 0 1 14-14h470a14 14 0 0 1 14 14v25H1z" fill="#161b22"/>
-<line x1="1" y1="40" x2="499" y2="40" stroke="#30363d" stroke-width="1.5"/>
+<defs><linearGradient id="grad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#83f28f"/><stop offset="1" stop-color="#69a7ff"/></linearGradient><clipPath id="digita"><rect x="22" y="52" width="0" height="28"><animate attributeName="width" from="0" to="320" begin="0.3s" dur="0.9s" fill="freeze"/></rect></clipPath><radialGradient id="hs"><stop offset="0" stop-color="#f4ff3a" stop-opacity="0.75"/><stop offset="1" stop-color="#b6ff7a" stop-opacity="0"/></radialGradient></defs>
+<rect x="1" y="1" width="498" height="716" rx="14" fill="#070b12" stroke="#223047" stroke-width="2"/>
+<path d="M1 15a14 14 0 0 1 14-14h470a14 14 0 0 1 14 14v25H1z" fill="#0e1623"/>
+<line x1="1" y1="40" x2="499" y2="40" stroke="#223047" stroke-width="1.5"/>
 <circle cx="22" cy="20.0" r="6" fill="#ff5f57"/>
 <circle cx="42" cy="20.0" r="6" fill="#febc2e"/>
 <circle cx="62" cy="20.0" r="6" fill="#28c840"/>
@@ -42,6 +42,11 @@
 <rect x="182" y="643.8" width="28" height="20" rx="3" fill="#69a7ff" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="4.79s" dur="0.2s" fill="freeze"/></rect>
 <rect x="214" y="643.8" width="28" height="20" rx="3" fill="#bc8cff" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="4.84s" dur="0.2s" fill="freeze"/></rect>
 <rect x="246" y="643.8" width="28" height="20" rx="3" fill="#e6edf3" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="4.89s" dur="0.2s" fill="freeze"/></rect>
+<g opacity="0"><circle r="11" fill="url(#hs)"/><circle r="2.1" fill="#f6ffb0"/><animateMotion path="M237 214 Q311 215 369 192 Q286 198 252 221 Q182 224 161 203 Q211 190 237 214" dur="25.6s" begin="5.41s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.95;0.25;0.85;0" dur="7.0s" begin="5.41s" repeatCount="indefinite"/></g>
+<g opacity="0"><circle r="11" fill="url(#hs)"/><circle r="2.1" fill="#f6ffb0"/><animateMotion path="M283 119 Q196 161 113 207 Q140 168 126 127 Q160 108 177 89 Q240 102 283 119" dur="26.0s" begin="3.29s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.95;0.25;0.85;0" dur="8.0s" begin="3.29s" repeatCount="indefinite"/></g>
+<g opacity="0"><circle r="11" fill="url(#hs)"/><circle r="2.1" fill="#f6ffb0"/><animateMotion path="M346 249 Q293 188 198 136 Q222 131 191 99 Q228 126 325 176 Q360 212 346 249" dur="20.0s" begin="5.40s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.95;0.25;0.85;0" dur="5.2s" begin="5.40s" repeatCount="indefinite"/></g>
+<g opacity="0"><circle r="11" fill="url(#hs)"/><circle r="2.1" fill="#f6ffb0"/><animateMotion path="M286 266 Q221 168 185 103 Q168 218 203 310 Q243 212 323 110 Q301 175 286 266" dur="17.3s" begin="4.66s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.95;0.25;0.85;0" dur="6.9s" begin="4.66s" repeatCount="indefinite"/></g>
+<g opacity="0"><circle r="11" fill="url(#hs)"/><circle r="2.1" fill="#f6ffb0"/><animateMotion path="M142 181 Q138 159 169 146 Q297 214 383 272 Q265 301 195 291 Q151 226 142 181" dur="19.3s" begin="4.78s" repeatCount="indefinite"/><animate attributeName="opacity" values="0;0.95;0.25;0.85;0" dur="5.9s" begin="4.78s" repeatCount="indefinite"/></g>
 <text x="22" y="696.8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="17" opacity="0"><tspan fill="#83f28f" font-weight="700">thulio@mestria</tspan><tspan fill="#8b949e">:~$</tspan><animate attributeName="opacity" from="0" to="1" begin="5.24s" dur="0.1s" fill="freeze"/></text>
 <rect x="215.8" y="681.8" width="10" height="20" fill="#e6edf3" opacity="0"><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.01;0.5;0.51;1" dur="1.1s" begin="5.24s" repeatCount="indefinite"/></rect>
 </svg>
