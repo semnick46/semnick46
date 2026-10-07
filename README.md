@@ -1,6 +1,8 @@
 <div align="center">
 
 <picture>
+  <source media="(max-width: 700px) and (prefers-color-scheme: dark)" srcset="assets/terminal-celular-escuro.svg">
+  <source media="(max-width: 700px)" srcset="assets/terminal-celular-claro.svg">
   <source media="(prefers-color-scheme: dark)" srcset="assets/terminal-escuro.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/terminal-claro.svg">
   <img alt="thulio@mestria: fundador da MestrIA, app de estudo com IA e compromisso de estudo na Solana" src="assets/terminal-escuro.svg" width="900">
