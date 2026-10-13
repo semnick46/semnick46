@@ -79,18 +79,20 @@ def carregar(args):
     if args.dados:
         bruto = json.load(open(args.dados, encoding="utf-8"))
     else:
+        # Primeiro o gráfico público do perfil: é o que o GitHub mostra, com
+        # as contribuições privadas contadas quando o perfil permite. A API
+        # com o token da Action só enxerga as públicas, então fica de reserva.
         bruto, erros = None, []
+        try:
+            bruto = buscar_html(args.usuario)
+        except Exception as e:
+            erros.append(f"página: {e}")
         token = os.environ.get("GITHUB_TOKEN")
-        if token:
+        if bruto is None and token:
             try:
                 bruto = buscar_graphql(args.usuario, token)
-            except Exception as e:  # cai para a página pública
-                erros.append(f"graphql: {e}")
-        if bruto is None:
-            try:
-                bruto = buscar_html(args.usuario)
             except Exception as e:
-                erros.append(f"página: {e}")
+                erros.append(f"graphql: {e}")
         if bruto is None:
             print("Sem dados hoje; o mapa anterior continua no ar.", *erros, sep="\n", file=sys.stderr)
             return None
